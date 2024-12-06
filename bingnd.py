@@ -5,43 +5,45 @@ import datetime
 import random
 
 
-#Code Modificado : ***Yimber C 19/05/23 
+#Modified Code : ***Yimber C 19/05/23
 #Made in Ecuador : $%$%$%%$%%%
-        
+
 system("clear")
-print(" \033[1;33m-----------------------------------")                      
+print(" \033[1;33m-----------------------------------")
 print(" \033[1;33m| `7MM'''Yp, `7MMF'`7MN.   `7MF'  |")
 print(" |   MM    Yb   MM    MMN.    M    |")
 print(" |   MM    dP   MM    M YMb   M    |")
 print(" |   \033[1;34mMM'''bg.   MM    M  `MN. M    |")
 print(" |   MM    `Y   MM    M   `MM.M    |")
 print(" | \033[1;31m  MM    ,9   MM    M     YMM    |")
-print(" | .JMMmmmd9  .JMML..JML.    YM    |")                
+print(" | .JMMmmmd9  .JMML..JML.    YM    |")
 print(" |                                 |")
 system("bash day")
 print(" \033[1;31m-----------------------------------")
 bin_format = input(" \033[1;34m> \033[1;32mBIN: \033[1;37m")
-cantidad = input(" \033[1;34m> \033[1;32mCANTIDAD: \033[1;37m")
+month = input(" \033[1;34m> \033[1;32mMONTH[7]: \033[1;37m")
+year = input(" \033[1;34m> \033[1;32mYEAR[24]: \033[1;37m")
+amount = input(" \033[1;34m> \033[1;32mAMOUNT: \033[1;37m")
 print("")
 system("bash loading")
-system("setterm -foreground green")
 
-def esValido(num_tarjeta):
-  suma = 0
-  num_digitos = len(num_tarjeta)
-  pos_par_impar = num_digitos & 1
 
-  for i in range(0, num_digitos):
-    digito = int(num_tarjeta[i])
-    if not ((i & 1) ^ pos_par_impar):
-      digito = digito * 2
-    if digito > 9:
-      digito = digito - 9
-    suma = suma + digito
+def esValido(num_cart):
+  sum = 0
+  num_digits = len(num_card)
+  pos_even_odd = num_digits & 1
 
-  return (suma % 10 == 0)
+  for i in range(0, num_digits):
+    digit = int(card_num[i])
+    if not ((i & 1) ^ pos_even_odd):
+      digit = digit * 2
+    if digit > 9:
+      digit = digit - 9
+    sum = sum + digit
 
-def generar_cc(bin_format):
+  return (sum % 10 == 0)
+
+def generate_cc(bin_format):
   cc = ""
   if len(bin_format) == 16:
     for i in range(15):
@@ -51,21 +53,21 @@ def generar_cc(bin_format):
       elif bin_format[i] == "x":
         cc += str(randint(0, 9))
       else:
-        print("\nCaracter no valido en el formato: {}\n".format(bin_format))
-        print("El formato del bin es: xxxxxxxxxxxxxxxx de 16 digitos\n")
+        print("\nInvalid character in the format: {}\n".format(bin_format))
+        print("The bin format is: xxxxxxxxxxxxxxxx 16 digits\n")
         sys.exit()
 
     for i in range(10):
-      verificador = cc + str(i)
-      if esValido(verificador):
-        cc = verificador
+      verifier = cc + str(i)
+      if isValid(verifier):
+        cc = verifier
         break
       else:
-        verificador = cc
+        verifier = cc
 
   else:
-    print("\nERROR: Inserte un bin válido\n")
-    print("SOLUCIÓN: El formato del bin es: xxxxxxxxxxxxxxxx de 16 dígitos\n")
+    print("\nERROR: Please insert a valid bin\n")
+    print("SOLUTION: The bin format is: xxxxxxxxxxxxxxxx 16 digits\n")
     sys.exit()
 
   return cc
@@ -93,13 +95,12 @@ print(" \033[1;32m|       BIN        | DATE | CVV |")
 print("  \033[1;32m-------------------------------")
 
 def main():
-  for i in range(int(cantidad)):                
-    cc = generar_cc(bin_format)
-    print(f" \033[1;32m| \033[1;37m{cc} \033[1;32m| \033[1;37m{dategen()} \033[1;32m| \033[1;37m{ccv_gen()}\033[1;32m |")
+  for i in range(int(amoubt)):                
+    cc = generate_cc(bin_format)
+    print(f" \033[1;32m| \033[1;37m{cc} \033[1;32m| \033[1;37m{month}/{year} \033[1;32m| \033[1;37m{ccv_gen()}\033[1;32m |")
 main()
 
 print("  \033[1;32m-------------------------------")
 print("")
 print("")
-system("bash funcion")
-
+system("bash function")
