@@ -1,44 +1,42 @@
 # BIN
-Genera bin de 16 digitos comensando con los primeros 6 digitos , primeros 10 digitos, o los primeros 12 digitos de una cc ej.4240940880xxxxxx .
+Generates 16 digit bin starting with the first 6 digits, first 10 digits, or the first 12 digits of a cc ex.4240940880xxxxxx.
 
-NOTA: USAR NAVEGADOR DUCKDUCK-GO PARA MAYOR EFECTIVIDAD CALAR EN AMAZON, PARAMOUNT, SPOTIFY, DISNEY.
+NOTE: USE DUCKDUCK-GO BROWSER FOR GREATER EFFECTIVENESS ON AMAZON, PARAMOUNT, SPOTIFY, DISNEY.
 
-#USO
+#USE
 
-#INSTALAR COMANDOS
+#INSTALL COMMANDS
 
-- pkg install python
+pkg install python
 
-- pip install datetime
+pip install datetime
 
-#CLONAR REPOSITORIO Y EJECUTAR
+#CLONE REPOSITORY AND RUN
 
-- git clone https://github.com/MRX90902WX/BIN
+git clone https://github.com/d3fectlulz/BIN-en
 
-- cd BIN
+CD BIN-en
 
-- bash generador.sh
+bash generator.sh
 
-#OPCIÓN 1 GENERA BIN Rnd
+#OPTION 1 GENERATE BIN Rnd
 
-==> Ingresa el bin :
+==> Enter the bin:
 
-==> La cantidad a generar :
+==> The amount to be generated:
 
-#OPCIÓN 2 GENERA BIN CON FECHA Rnd
+#OPTION 2 GENERATE BIN WITH DATE Rnd
 
-==> Ingresa el bin :
+==> Enter the bin:
 
-==> Ingresa la fecha de cad :
+==> Enter the expiration date:
 
-==> La cantidad a generar :
-
+==> The amount to be generated:
 *****
-#Nota: Solo genera Visa y Mastercard 
+#Note: Only generates Visa and Mastercard
 *****
+CREDITS:
 
-CREDITOS:
-
-- @Demo593
-- Dudas escribeme al 
-- Telegram 🔝 
+@Demo593
+Questions write to me at
+Telegram 🔝
