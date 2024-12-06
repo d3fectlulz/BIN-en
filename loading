@@ -9,7 +9,7 @@ while [ $count -lt $total ]; do
   pd=$(( $count * 20 / $total ))
   runtime=$(( $cur-$start ))
   estremain=$(( ($runtime * $total / $count)-$runtime ))
-  printf " Cargando Resultados "
+  printf " Loading Results "
   printf "\r%d.%d%%" $(( $count*100/$total )) $(( ($count*1000/$total)%10))
 done
 
