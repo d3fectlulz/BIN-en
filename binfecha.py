@@ -84,7 +84,7 @@ print(" \033[1;32m|       BIN        | DATE | CVV |")
 print("  \033[1;32m-------------------------------")
 
 def main():
-  for i in range(int(amoubt)):                
+  for i in range(int(amount)):                
     cc = generate_cc(bin_format)
     print(f" \033[1;32m| \033[1;37m{cc} \033[1;32m| \033[1;37m{month}/{year} \033[1;32m| \033[1;37m{ccv_gen()}\033[1;32m |")
 main()
